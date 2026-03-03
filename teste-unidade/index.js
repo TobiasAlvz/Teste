@@ -3,7 +3,7 @@ function funcaoSoma(a, b) {
 }
 
 // teste para saber se é positivo
-console.assert(funcaoSoma(5, 3) > 0, "Erro, o numero deveria ser positivo");
+console.assert(funcaoSoma(5, 3) > 0, "Erro, o numero deveria ser positivo.");
 console.assert(funcaoSoma(-20, 5) > 0, "Erro, o numero deveria ser positivo");
 
 //teste para saber se é negativo
