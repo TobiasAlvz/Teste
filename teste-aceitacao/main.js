@@ -32,3 +32,42 @@ function gerarRelatorio(vendas) {
 
 let produtos = [];
 let vendas = [];
+
+console.assert(
+  cadastrarProduto("Camisa", 50, 10, produtos) ===
+    "Produto cadastrado com sucesso",
+  "Erro ao cadastrar produto",
+);
+
+console.assert(
+  cadastrarProduto("Calça", 100, 15, produtos) ===
+    "Produto cadastrado com sucesso",
+  "Erro ao cadastrar produto",
+);
+
+// console.assert(
+//   cadastrarProduto("Camisa", -50, 10, produtos) ===
+//     "Produto cadastrado com sucesso",
+//   "Erro ao cadastrar produto",
+// );
+
+console.assert(
+  registrarVenda("Camisa", 2, produtos, vendas) ===
+    "Venda registrada com sucesso",
+  "erro ao registrar venda",
+);
+
+console.assert(
+  registrarVenda("Calça", 5, produtos, vendas) ===
+    "Venda registrada com sucesso",
+  "erro ao registrar venda",
+);
+//
+
+// console.assert(
+//   registrarVenda("Camisa", 100, produtos, vendas) ===
+//     "Venda registrada com sucesso",
+//   "erro ao registrar venda",
+// );
+
+console.log(vendas);
