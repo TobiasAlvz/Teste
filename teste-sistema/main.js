@@ -25,6 +25,8 @@ console.assert(
   "Erro, no cadastro valido",
 );
 
+
+
 console.assert(
   cadastrarCliente("Maria", "maria@email.com", "123456", usuarios) ===
     "O nome é obrigatorio",
