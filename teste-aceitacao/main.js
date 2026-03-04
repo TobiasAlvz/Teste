@@ -2,6 +2,7 @@ function cadastrarProduto(nome, preco, estoque, produtos) {
   if (!nome) return "Erro: nome do produto é obrigatório";
   if (preco <= 0) return "Erro: preço inválido";
 
+  
   produtos.push({ nome, preco, estoque });
   return "Produto cadastrado com sucesso";
 }
