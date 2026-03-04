@@ -5,7 +5,7 @@ function cadastrarCliente(nome, email, senha, usuarios) {
   if (!email.includes("@")) {
     return "email invalido";
   }
-  if (senha.lenght < 6) {
+  if (senha.length < 6) {
     return "Senha muito curta";
   }
   if (usuarios.includes(email)) {
@@ -41,4 +41,29 @@ console.assert(
   cadastrarCliente("", "mariaemail.com", "123456", usuarios) ===
     "usuario cadastrado com sucesso",
   "Nome vazio",
+);
+
+// teste positivo
+console.assert(
+  cadastrarCliente("joao", "joao@email.com", "1234567", usuarios) ===
+    "Email já cadastrado",
+  "email duplicado",
+);
+
+console.assert(
+  cadastrarCliente("joao", "joao@email.com", "1234567", usuarios) ===
+    "usuario cadastrado com sucesso",
+  "email duplicado",
+);
+
+console.assert(
+  cadastrarCliente("joao", "joao@email.com", "123", usuarios) ===
+    "Senha muito curta",
+  "Senha curta",
+);
+
+console.assert(
+  cadastrarCliente("joao", "joao@email.com", "1234324234", usuarios) ===
+    "usuario cadastrado com sucesso",
+  "Senha curta",
 );
