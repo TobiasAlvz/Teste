@@ -62,7 +62,6 @@ console.assert(
     "Venda registrada com sucesso",
   "erro ao registrar venda",
 );
-//
 
 console.assert(
   registrarVenda("Camisa", 100, produtos, vendas) ===
