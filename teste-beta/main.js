@@ -1,7 +1,6 @@
-// Sistema liberado em versão BETA
+
 let feedbacks = [];
 
-// função que simula usuário usando o app
 function usarAplicativo(usuario, acao) {
   console.log(usuario + " está usando o aplicativo...");
 
@@ -20,7 +19,6 @@ function usarAplicativo(usuario, acao) {
   return "Aplicativo funcionando normalmente";
 }
 
-// função para reportar feedback
 function reportarFeedback(usuario, mensagem) {
   const feedback = {
     usuario,
@@ -30,7 +28,6 @@ function reportarFeedback(usuario, mensagem) {
   feedbacks.push(feedback);
 }
 
-// ===== USUÁRIOS BETA TESTANDO =====
 
 let teste1 = usarAplicativo("João", "erro_login");
 reportarFeedback("João", teste1);
@@ -41,7 +38,6 @@ reportarFeedback("Maria", teste2);
 let teste3 = usarAplicativo("Carlos", "sugestao");
 reportarFeedback("Carlos", teste3);
 
-// ===== EQUIPE ANALISANDO FEEDBACK =====
 
 console.log("Feedbacks recebidos no Beta:");
 
