@@ -1,18 +1,8 @@
 const cardapio = [
-  {
-    id: 1,
-    nome: "Hamburguer",
-    preco: 12,
-    id: 2,
-    nome: "Pizza",
-    preco: 20,
-    id: 3,
-    nome: "Coxinha",
-    preco: 6,
-    id: 4,
-    nome: "Suco",
-    preco: 5,
-  },
+  { id: 1, nome: "Hamburguer", preco: 12 },
+  { id: 2, nome: "Pizza", preco: 20 },
+  { id: 3, nome: "Coxinha", preco: 6 },
+  { id: 4, nome: "Suco", preco: 5 },
 ];
 
 let usarios = [];
@@ -72,9 +62,11 @@ function criarPedido(idUsuario, idPrato, quantidade) {
 }
 
 const usuarioTeste1 = cadastrarUsuario("João", "João@gmail.com");
-console.assert(usuarioTeste1.nome === "João", "Erro: nome invalido")
-
-
+console.assert(usuarioTeste1.nome === "João", "Erro: nome invalido");
 
 const usuarioTeste2 = cadastrarUsuario("João", "João@gmail.com");
-console.assert(usuarioTeste2.nome === "Carlos", "Erro: nome invalido")
+console.assert(usuarioTeste2.nome === "Carlos", "Erro: nome invalido");
+
+const pedidoTeste1 = criarPedido(usuarioTeste1.id, 2, 1);
+
+console.assert(pedidoTeste1.total === 20, "Erro: Valor incorrento");
