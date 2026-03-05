@@ -70,3 +70,11 @@ function criarPedido(idUsuario, idPrato, quantidade) {
 
   return pedido;
 }
+
+const usuarioTeste1 = cadastrarUsuario("João", "João@gmail.com");
+console.assert(usuarioTeste1.nome === "João", "Erro: nome invalido")
+
+
+
+const usuarioTeste2 = cadastrarUsuario("João", "João@gmail.com");
+console.assert(usuarioTeste2.nome === "Carlos", "Erro: nome invalido")
