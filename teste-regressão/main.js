@@ -47,4 +47,5 @@ console.assert(
 console.log(testeCartao);
 console.log(testeDinheiro);
 console.log(testePix);
+
 console.log(recibo);
