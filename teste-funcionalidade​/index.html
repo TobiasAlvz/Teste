@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sistema de Email</title>
+
+        <style>
+
+body{
+font-family: Arial;
+margin:40px;
+}
+
+input, textarea{
+display:block;
+margin-bottom:10px;
+width:300px;
+padding:8px;
+}
+
+button{
+padding:10px;
+}
+
+</style>
+
+    </head>
+
+    <body>
+
+        <h2>Enviar Email</h2>
+
+        <label>Destinatário</label>
+        <input id="destinatario" type="text">
+
+        <label>Assunto *</label>
+        <input id="assunto" type="text">
+
+        <label>Mensagem</label>
+        <textarea id="mensagem"></textarea>
+
+        <button onclick="enviar()">Enviar</button>
+
+        <p id="resultado"></p>
+
+        <script>
+
+function enviarEmail(destinatario, assunto, mensagem){
+
+if(assunto === ""){
+return "Erro: assunto obrigatório"
+}
+
+if(destinatario === ""){
+return "Erro: destinatário obrigatório"
+}
+
+return "Email enviado com sucesso"
+
+}
+
+function enviar(){
+
+let destinatario = document.getElementById("destinatario").value
+let assunto = document.getElementById("assunto").value
+let mensagem = document.getElementById("mensagem").value
+
+let resultado = enviarEmail(destinatario, assunto, mensagem)
+
+document.getElementById("resultado").innerText = resultado
+
+}
+</script>
+
+    </body>
+</html>
